@@ -17,3 +17,5 @@ for n in range(20):
 
 
 plt.plot(lix)
+
+# a line with a comment
