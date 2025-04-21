@@ -48,3 +48,11 @@ Ainv = (A**-1).subs([(a**3,1),(a**4,a),(a**2+a,-1),(a+1,-a**2),(a**2+1,-a),(1/a,
 
 Z012 = symbols("Z_{012}")
 Z012_v1 = Ainv*Zabc*A
+
+zs = symbols("z_s")
+zm = symbols("z_m")
+
+Z012_v2 = Z012_v1.subs([(za/3+zb/3+zc/3, zs/3), (zab/3+zbc/3+zac/3, zm/3)])
+
+k3 = symbols("k_3")
+Z012v3 = k3*3*Z012_v2
