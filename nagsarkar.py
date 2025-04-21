@@ -25,6 +25,11 @@ for n in li_branch_aux:
 
 
 #%% Nagsarkar 10 exploring symm comp
+# https://www.sympy.org/de/shell.html
+
+from sympy import *
+init_printing()
+
 za = symbols("z_{a}")
 zab = symbols("z_{ab}")
 zac = symbols("z_{ac}")
