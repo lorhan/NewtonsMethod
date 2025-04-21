@@ -9,7 +9,9 @@ Uf = [(U0-If*Zaux*x) for x in X]
 # Node voltages
 for uf in Uf:
     print("{:.3e}".format(uf))
-    
+
+
+# Branch currents
 li_branch_aux = [
     [1,2,200],
     [2,3,250],
