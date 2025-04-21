@@ -22,3 +22,24 @@ for n in li_branch_aux:
     zab = n[2]*Zaux
     Ifab = (Ufa-Ufb)/zab
     print(f"If({a+1},{b+1}): {Ifab}")
+
+
+#%% Nagsarkar 10 exploring symm comp
+za = symbols("z_{a}")
+zab = symbols("z_{ab}")
+zac = symbols("z_{ac}")
+zb = symbols("z_{b}")
+zbc = symbols("z_{bc}")
+zc = symbols("z_{c}")
+Zabc = symbols("Z_{abc}")
+Zabc = Matrix([[za,zab,zac],[zab,zb,zbc],[zac,zbc,zc]])
+
+
+a = symbols(r"\alpha")
+
+A = Matrix([[1,1,1],[1,a**2,a],[1,a,a**2]])
+Ainv = (A**-1).subs([(a**3,1),(a**4,a),(a**2+a,-1),(a+1,-a**2),(a**2+1,-a),(1/a,a**2)])
+
+
+Z012 = symbols("Z_{012}")
+Z012_v1 = Ainv*Zabc*A
